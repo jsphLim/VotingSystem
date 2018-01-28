@@ -57,9 +57,11 @@ deploy.address //获取合约地址
 以上代码在load.js中可以查看
 
 ## 合约的调用
-在index.js中调用合约<br>
+直接运行index.html即可看到主界面<br>
+合约的调用在index.js中实现<br>
 ### 注意事项
-1.abi为之前准备过程中让大家保存的interface中的内容<br>
+1.index.js中,abi为之前准备过程中让大家保存的interface中的内容<br>
 2.Contract.at()中的代码为之前准备过程中获取的合约地址
 
-
+## 参考资料
+[baidu]:https://www.jianshu.com/p/319c34420c3a
