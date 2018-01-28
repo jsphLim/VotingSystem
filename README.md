@@ -2,7 +2,7 @@
 Ubuntu16.10
 ## 准备工作
 1.安装node.js<br>
-···
+···Bash
 sudo apt install nodejs
 ···
 sudo apt install npm<br>
