@@ -45,9 +45,10 @@ Contract = web3.eth.contract(abi) //开始部署合约
 
 byteCode = compileRes.contracts[':Voting'].bytecode//获取合约的二进制代码
 
-deploy = Contract.new(['zhang', 'bin', 'cheng'], {data: byteCode, from: web3.eth.accounts[0], gas: 4000000})//发布合约 四个参数 第一个是合约构造函数的参数 第二个是二进制码 第三个是帐户名 第四个是gas
+deploy = Contract.new(['zhang', 'bin', 'cheng'], {data: byteCode, from: web3.eth.accounts[0], gas: 4000000})
+//发布合约 四个参数 第一个是合约构造函数的参数 第二个是二进制码 第三个是帐户名 第四个是gas
 
 deploy.address //获取合约地址
 ```
-
+![Image text]https://github.com/jsphLim/VotingSystem/blob/master/img/1.png
 
