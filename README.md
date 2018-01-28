@@ -2,9 +2,9 @@
 Ubuntu16.10
 ## 准备工作
 1.安装node.js<br>
-···Bash
+```Bash
 sudo apt install nodejs
-···
+```
 sudo apt install npm<br>
 如果出现依赖错误 自行百度可以解决<br>
 安装完成后 node -v 即可查看版本
