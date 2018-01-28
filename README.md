@@ -54,3 +54,7 @@ deploy.address //获取合约地址
 ```
 ![Image text](https://github.com/jsphLim/VotingSystem/blob/master/img/1.png)
 
+以上代码在load.js中可以查看
+
+### 
+
