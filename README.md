@@ -39,8 +39,10 @@ solc = require('solc') //引入solc 由于web3删去了编译合约的函数comp
 
 compileRes = solc.compile(sol)//编译合约
 
-abi = JSON.parse(compileRes.contracts[':Voting'].interface) //获取abi 保存interface这串字符串 在后续会用到
-
+abi = JSON.parse(compileRes.contracts[':Voting'].interface) //获取abi 保存interface这串字符串 在后续会用
+```
+![Image text](https://github.com/jsphLim/VotingSystem/blob/master/img/3.png)
+```Bash
 Contract = web3.eth.contract(abi) //开始部署合约
 
 byteCode = compileRes.contracts[':Voting'].bytecode//获取合约的二进制代码
@@ -50,5 +52,5 @@ deploy = Contract.new(['zhang', 'bin', 'cheng'], {data: byteCode, from: web3.eth
 
 deploy.address //获取合约地址
 ```
-![Image text]https://github.com/jsphLim/VotingSystem/blob/master/img/1.png
+![Image text](https://github.com/jsphLim/VotingSystem/blob/master/img/1.png)
 
