@@ -6,14 +6,14 @@ Ubuntu16.10
 sudo apt install nodejs
 ```
 ```Bash
-sudo apt install npm<br>
+sudo apt install npm
 ```
 如果出现依赖错误 自行百度可以解决<br>
 安装完成后 node -v 即可查看版本
-2.安装以太<br>
+2.安装以太坊<br>
 ```Bash
-npm install -g ethereumjs-testrpc --save<br>
-npm install web3@0.20.1 --save<br>
+npm install -g ethereumjs-testrpc --save
+npm install web3@0.20.1 --save
 ```
 #### 此处使用0.2x版本 因为1.0版本目前还处于测试阶段 本人调试过程中出现了一些错误
 ```Bash
@@ -26,13 +26,13 @@ testrpc
 4.部署智能合约
 在项目目录文件下启动node的控制台(直接输入node) 输入以下指令进行编译
 ```Bash
-const fs = require('fs')<br> //引入文件读写
+const fs = require('fs') //引入文件读写
 
-Web3 = require('web3')<br>//引入web3
+Web3 = require('web3') //引入web3
 
-web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))<br>
+web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 
-web3.eth.accounts<br> //查看当前所有账户
+web3.eth.accounts //查看当前所有账户
 
 sol = fs.readFileSync('Voting.sol').toString() //读入合约
 solc = require('solc') //引入solc 由于web3删去了编译合约的函数compileSolidity 所以需要用到solc来编译
