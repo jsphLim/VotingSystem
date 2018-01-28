@@ -24,19 +24,30 @@ npm install solc --save
 testrpc
 ```
 4.部署智能合约
+在项目目录文件下启动node的控制台(直接输入node) 输入以下指令进行编译
 ```Bash
-const fs = require('fs')<br>
-Web3 = require('web3')<br>
+const fs = require('fs')<br> //引入文件读写
+
+Web3 = require('web3')<br>//引入web3
+
 web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))<br>
-web3.eth.accounts<br>
-sol = fs.readFileSync('Voting.sol').toString()<br>
-solc = require('solc')<br>
-compileRes = solc.compile(sol)<br>
-abi = JSON.parse(compileRes.contracts[':Voting'].interface)<br>
-Contract = web3.eth.contract(abi)<br>
-byteCode = compileRes.contracts[':Voting'].bytecode<br>
-deploy = Contract.new(['zhang', 'bin', 'cheng'], {data: byteCode, from: web3.eth.accounts[0], gas: 4000000})<br>
-deploy.address<br>
+
+web3.eth.accounts<br> //查看当前所有账户
+
+sol = fs.readFileSync('Voting.sol').toString() //读入合约
+solc = require('solc') //引入solc 由于web3删去了编译合约的函数compileSolidity 所以需要用到solc来编译
+
+compileRes = solc.compile(sol)//编译合约
+
+abi = JSON.parse(compileRes.contracts[':Voting'].interface) //获取abi 保存interface这串字符串 在后续会用到
+
+Contract = web3.eth.contract(abi) //开始部署合约
+
+byteCode = compileRes.contracts[':Voting'].bytecode//获取合约的二进制代码
+
+deploy = Contract.new(['zhang', 'bin', 'cheng'], {data: byteCode, from: web3.eth.accounts[0], gas: 4000000})//发布合约 四个参数 第一个是合约构造函数的参数 第二个是二进制码 第三个是帐户名 第四个是gas
+
+deploy.address //获取合约地址
 ```
 
 
