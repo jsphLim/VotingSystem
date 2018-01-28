@@ -64,4 +64,7 @@ deploy.address //获取合约地址
 2.Contract.at()中的代码为之前准备过程中获取的合约地址
 
 ## 参考资料
-[baidu]:https://www.jianshu.com/p/319c34420c3a
+http://web3.tryblockchain.org/<br>
+https://www.jianshu.com/p/319c34420c3a<br>
+https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2
+
