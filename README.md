@@ -10,7 +10,7 @@ sudo apt install nodejs
 sudo apt install npm
 ```
 如果出现依赖错误 自行百度可以解决<br>
-安装完成后 node -v 即可查看版本
+安装完成后 node -v 即可查看版本<br>
 2.安装以太坊<br>
 ```Bash
 npm install -g ethereumjs-testrpc --save
