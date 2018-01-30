@@ -6,6 +6,10 @@ Ubuntu16.10
 ```Bash
 sudo apt install nodejs
 ```
+初始化项目目录
+```Bash
+npm init
+```
 项目目录下需要有node_modules和package.json
 ```Bash
 sudo apt install npm
